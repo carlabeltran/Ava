@@ -1,7 +1,7 @@
 # ![Logo][AvaLogo]
 [AvaLogo]: https://github.com/carlabeltran/Ava/blob/master/Develop/public/assets/images/Ava-logo-blue/facebook_cover_photo_2.png?raw=true "Ava Logo"
 
-## Welcome to Ava! 👋
+## Welcome! 👋
 
 Ava allows the user to be able to add expenses and deposits to their budget with or without a connection to the internet. When entering transactions offline, they should populate the total when brought back online.
 
