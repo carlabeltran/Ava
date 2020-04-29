@@ -1,5 +1,3 @@
-console.log("SERVICE WORKER CONNECTED!");
-
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
