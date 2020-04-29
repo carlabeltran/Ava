@@ -1,11 +1,103 @@
-# Ava
-Budget Tracker Application
+# ![Logo][AvaLogo]
+[GymRatLogo]: https://github.com/carlabeltran/Fitness-Tracker/blob/master/Develop/public/assets/images/Gym-Rat-Logo/logo_transparent.png?raw=true "Ava Logo"
 
-# Unit 18 PWA Homework: Online/Offline Budget Trackers
+## Welcome to Ava! 👋
 
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
+Ava allows the user to be able to add expenses and deposits to their budget with or without a connection to the internet. When entering transactions offline, they should populate the total when brought back online.
 
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
+## ✨ Demo
+
+![Ava Demo][demo]
+
+[demo]: https://github.com/carlabeltran/Fitness-Tracker/blob/master/Develop/public/assets/images/Ava-Demo.gif?raw=true "Ava Demo"
+
+-----
+
+## 🚀 Deployment
+
+This application is delployed at [Ava](https://eattburgerapp.herokuapp.com/)
+
+---
+
+## 📕 User Story
+
+```
+AS AN avid traveller I WANT to be able to track my withdrawals and deposits with or without a data/internet connection SO THAT my account balance is accurate when I am traveling
+```
+
+## 💼 Business Context
+
+```
+Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+```
+
+## ⬇️️ Installation
+
+No installation required.
+
+
+### Directory
+
+```
+.
+├── models
+│   ├── transaction.js
+│
+├── public
+│   ├── assets
+│   │   ├──images
+│   │   │   └── Ava-Demo
+│   │   │    └── Ava-logo-blue
+│   │   │
+│   │   └── icons
+│   │     
+│   │       
+│   ├── index.html
+│   ├── index.js
+│   └──  styles.css
+│   
+│   
+├── routes
+│   └──  api.js
+│   
+│
+├── package.json
+└── server.js
+
+```
+
+## Getting Started
+
+### 💯 Usage
+
+##### **Step 1**
+
+```
+
+```
+##### **Step 2**
+
+```
+
+```
+##### **Step 3**
+
+```
+
+```
+
+##### **Step 4**
+```
+
+```
+##### **Step 5**
+```
+
+```
+-----
+## 🌈 Features
+
+* Responsive Design & User Friendly
 
 Offline Functionality:
 
@@ -17,47 +109,69 @@ When brought back online:
 
   * Offline entries should be added to tracker.
 
-## User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
+*****
 
-## Business Context
+## 💡 Tech
 
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+* HTML
+* CSS
+* JavaScript
+* Google Fonts
+* Node
+* Heroku
+* 
+* 
+* 
+* 
 
+---
 
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+## 🔮 Future work
 
-- - -
+- 
+- 
+- 
+- 
+- 
+- 
 
-## Commit Early and Often
+---
 
-* One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+## 🤝 Contribute
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+Feel free to contribute by forking the repo and submitting a pull request.
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
+You can clone the project with:
+```
+https://github.com/carlabeltran/Ava.git
+```
 
-* Follow these guidelines for committing:
+----
 
-  * Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+## ❓FAQS
 
-  * Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+#### How can I support you?
 
-  * Don't commit half done work, for the sake of your collaborators (and your future self!)
+There are lot's of ways to support me! Give this repository a ⭐, tweet about it and tell your friends!
 
-  * Test your application before you commit to ensure functionality at every step in the development process
+___
 
-* We would like you to have well over 200 commits by graduation, so commit early and often!
+## 👩🏻 Author
 
-## Submission on BCS
+![Profile Picture](https://github.com/carlabeltran/Eat-Da-Burger-/blob/master/public/img/profilepic250x350.png?raw=true)
 
-* You are required to submit the following:
+**Carla Beltran**
 
-  * the URL to the deployed application
+Full Stack Web Developer
 
-  * the URL to the Github repository
+> One big challenge. 
+
+- Email: [@carlabeltran](https://github.com/carlabeltran14@icloud.com)
+- Linkdin: [@carlabeltran](https://github.com/carlabeltran)
+
+----
+## 📝 License
+
+This project is MIT licensed.
+---
+***Copyright © 2020 [Carla Beltran](https://github.com/carlabeltran)***
