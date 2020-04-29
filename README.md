@@ -1,5 +1,5 @@
 # ![Logo][AvaLogo]
-[GymRatLogo]: https://github.com/carlabeltran/Fitness-Tracker/blob/master/Develop/public/assets/images/Gym-Rat-Logo/logo_transparent.png?raw=true "Ava Logo"
+[AvaLogo]: https://github.com/carlabeltran/Ava/blob/master/Develop/public/assets/images/Ava-logo-blue/facebook_cover_photo_2.png?raw=true "Ava Logo"
 
 ## Welcome to Ava! 👋
 
