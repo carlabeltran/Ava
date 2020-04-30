@@ -15,7 +15,7 @@ Ava allows the user to be able to add expenses and deposits to their budget with
 
 ## 🚀 Deployment
 
-This application is delployed at [Ava](https://eattburgerapp.herokuapp.com/)
+This application is delployed at [Ava](https://glacial-atoll-63487.herokuapp.com/)
 
 ---
 
