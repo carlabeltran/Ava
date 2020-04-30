@@ -9,7 +9,7 @@ Ava allows the user to be able to add expenses and deposits to their budget with
 
 ![Ava Demo][demo]
 
-[demo]: https://github.com/carlabeltran/Fitness-Tracker/blob/master/Develop/public/assets/images/Ava-Demo.gif?raw=true "Ava Demo"
+[demo]: https://github.com/carlabeltran/Ava/blob/master/Develop/public/assets/images/Ava-2.gif?raw=true "Ava Demo"
 
 -----
 
