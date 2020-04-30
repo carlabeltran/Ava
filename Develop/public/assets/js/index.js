@@ -32,6 +32,8 @@ function populateTable() {
     // create and populate a table row
     let tr = document.createElement("tr");
     tr.innerHTML = `
+      <td>${transaction.date}</td>
+      <td>${transaction.category}</td>
       <td>${transaction.name}</td>
       <td>${transaction.value}</td>
     `;
@@ -79,6 +81,7 @@ function populateChart() {
 }
 
 function sendTransaction(isAdding) {
+  let categoryEl = document.querySelector("#t-category");
   let nameEl = document.querySelector("#t-name");
   let amountEl = document.querySelector("#t-amount");
   let errorEl = document.querySelector(".form .error");
@@ -94,6 +97,7 @@ function sendTransaction(isAdding) {
 
   // create record
   let transaction = {
+    category: categoryEl.value,
     name: nameEl.value,
     value: amountEl.value,
     date: new Date().toISOString()
@@ -130,6 +134,7 @@ function sendTransaction(isAdding) {
     }
     else {
       // clear form
+      categoryEl.value = "";
       nameEl.value = "";
       amountEl.value = "";
     }
@@ -139,6 +144,7 @@ function sendTransaction(isAdding) {
     saveRecord(transaction);
 
     // clear form
+    categoryEl.value = "";
     nameEl.value = "";
     amountEl.value = "";
   });

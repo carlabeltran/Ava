@@ -7,50 +7,235 @@
   <meta name="theme-color" content="#317EFB">
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
   <link rel="shortcut icon" href="https://github.com/carlabeltran/Ava/blob/master/Develop/public/assets/images/Ava-logo-blue/favicon.png?raw=true" alt="ava icon">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+  <script src="https://use.fontawesome.com/0c8059d717.js"></script>
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="manifest" href="/manifest.webmanifest">
   <title>Ava</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
-    </div>
-
-    <div class="form">
-      
-      <label for="t-name"></label>
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      
-      <label for="t-amount"></label>
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      
-      <div class="transaction-buttons">
-      
-        <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      
-        <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-      
-        <p class="error"></p>
-      
+  <div class="container-fluid">
+    <div class="row" id="aside-background">
+      <div class="col-9">
+        <header class="header">
+          <div class="row">
+            <div class="col-6">
+              <h4><span class="stats"><i class="fa fa-bar-chart fa-lg" id="stats-icon" aria-hidden="true"></i></span> Stats</h4>
+            </div>
+            <div class="col-6">
+              <i class="fa fa-search fa-lg" id="search-icon" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="year">2020</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <a href="#" id="month">Jan</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Feb</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Mar</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Apr</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">May</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Jun</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Jul</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Aug</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Sep</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Oct</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Nov</a>
+            </div>
+            <div class="col-1">
+              <a href="#" id="month">Dec</a>
+            </div>
+          </div>    
+        </header>
       </div>
-    
+      <div class="col-3" id="aside">
+        <aside class="wrapper">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <h3>Overview</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+              <div class="total">
+                <h5>Balance</h5>
+                <div class="total">$<span id="total">0</span></div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
-
-    <div class="transactions">
-      <table>
-        <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
-        </thead>
-        <tbody id="tbody">
-          
-        </tbody>
-      </table>
+    <div class="row">
+      <div class="col-9">
+        <div class="form">
+          <div class="row">
+            <div class="col-3">
+                <label for="t-category"></label>
+                <input type="text" id="t-category" placeholder="Category" />
+            </div>
+            <div class="col-3">
+                <label for="t-name"></label>
+                <input type="text" id="t-name" placeholder="Description" />
+            </div>
+            <div class="col-3">
+                <label for="t-amount"></label>
+                <input type="number" min="0" id="t-amount" placeholder="Amount" />
+            </div>
+            <div class="col-1">
+                  <!-- <div class="transaction-buttons"> -->
+                <button id="add-btn"><i class="fa fa-plus buttons"></i></button>
+            </div>
+            <div class="col-1">
+              <button id="sub-btn"><i class="fa fa-minus"></i></button>
+            </div>
+            <p class="error"></p>
+          </div>
+          <div class="row">
+            <h2>All Transactions</h2>
+            <div class="col-12">
+              <div class="transactions">
+                <div class="card">
+                  <table>
+                    <thead>
+                      <th>Date</th>
+                      <th>Category</th>
+                      <th>Transaction</th>
+                      <th>Amount</th>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3" id="aside">
+        <aside class="wrapper">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+              <div class="add-total">
+                <h5>Income</h5>
+                <div class="add-total">$<span id="add-total">0</span></div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+              <div class="budget">
+                <h5>Budget</h5>
+                <div class="budget">$<span id="budget">0</span></div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+              <div class="sub-total">
+                <h5>Expenses</h5>
+                <div class="sub-total">$<span id="sub-total">0</span></div>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="card" id="canvas">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
-    <!-- <canvas id="my-chart"></canvas> -->
-    <canvas id="myChart"></canvas>
+    <footer class="footer">
+      <div class="inner-footer"></div>
+      <!--Waves Container-->
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+    </div>
+    <div class="content">
+      <img
+        src="https://github.com/carlabeltran/Ava/blob/master/Develop/public/assets/images/Ava-logo-blue/logo_transparent.png?raw=true"
+        alt="ava logo" style="width: 250px;height: 250px;">
+    </div>
+    </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="./assets/js/db.js"></script>
