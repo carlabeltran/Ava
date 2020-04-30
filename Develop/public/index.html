@@ -23,7 +23,12 @@
               <h4><span class="stats"><i class="fa fa-bar-chart fa-lg" id="stats-icon" aria-hidden="true"></i></span> Stats</h4>
             </div>
             <div class="col-6">
-              <i class="fa fa-search fa-lg" id="search-icon" aria-hidden="true"></i>
+              <div class="search-form">
+                <form>
+                  <input class="search-input" type="text"/>
+                  <button id="search-btn"><i class="fa fa-search fa-2x" aria-hidden="true" id="search-icon"></i></button>
+                </form>
+              </div>
             </div>
           </div>
           <div class="row">
@@ -106,7 +111,7 @@
       </div>
       <div class="col-3" id="aside">
         <aside class="wrapper">
-          <div class="row">
+          <div class="row" id="aside-wrapper">
             <div class="col-12">
               <div class="card">
                 <h3>Overview</h3>
@@ -128,30 +133,31 @@
     </div>
     <div class="row">
       <div class="col-9">
+        <br/>
         <div class="form">
-          <div class="row">
-            <div class="col-3">
-                <label for="t-category"></label>
-                <input type="text" id="t-category" placeholder="Category" />
-            </div>
-            <div class="col-3">
-                <label for="t-name"></label>
-                <input type="text" id="t-name" placeholder="Description" />
-            </div>
-            <div class="col-3">
-                <label for="t-amount"></label>
-                <input type="number" min="0" id="t-amount" placeholder="Amount" />
-            </div>
-            <div class="col-1">
-                  <!-- <div class="transaction-buttons"> -->
-                <button id="add-btn"><i class="fa fa-plus buttons"></i></button>
-            </div>
-            <div class="col-1">
-              <button id="sub-btn"><i class="fa fa-minus"></i></button>
-            </div>
+          <div class="row" id="input-section">
+            <!-- <div class="col-2">
+                <label class="form_label" for="t-category"></label>
+                <input class="form_field" type="text" id="t-category" placeholder="Category" />
+            </div> -->
             <p class="error"></p>
+            <div class="col-3">
+              <label class="form_label" for="t-name"></label>
+              <input class="form_field" type="text" id="t-name" placeholder="Description" required/>
+            </div>
+            <div class="col-3">
+              <label class="form_label" for="t-amount"></label>
+              <input class="form_field" type="number" min="0" id="t-amount" placeholder="Amount" required/>
+            </div>
+            <div class="col-1">
+              <i type="button" class="fa fa-plus fa-2x" id="add-btn"></i>
+            </div>
+            <div class="col-1">
+              <i type="button" class="fa fa-minus fa-2x" id="sub-btn"></i>
+            </div>
           </div>
-          <div class="row">
+          <div class="row" id='form'>
+            <br/>
             <h2>All Transactions</h2>
             <div class="col-12">
               <div class="transactions">
@@ -159,7 +165,6 @@
                   <table>
                     <thead>
                       <th>Date</th>
-                      <th>Category</th>
                       <th>Transaction</th>
                       <th>Amount</th>
                     </thead>
@@ -207,7 +212,7 @@
           <div class="row">
             <div class="col-12">
               <div class="card" id="canvas">
-                <canvas id="myChart"></canvas>
+                <canvas id="myChart" width="400" height="500"></canvas>
               </div>
             </div>
           </div>
@@ -233,7 +238,7 @@
     <div class="content">
       <img
         src="https://github.com/carlabeltran/Ava/blob/master/Develop/public/assets/images/Ava-logo-blue/logo_transparent.png?raw=true"
-        alt="ava logo" style="width: 250px;height: 250px;">
+        alt="ava logo" style="width: 200px;height: 200px;">
     </div>
     </footer>
   </div>
@@ -248,6 +253,20 @@
         });
       });
     }
+    var input = document.querySelector('.search-form');
+      var search = document.querySelector('input')
+      var button = document.querySelector('button');
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        input.classList.toggle('active');
+      })
+      search.addEventListener('focus', function () {
+        input.classList.add('focus');
+      })
+
+      search.addEventListener('blur', function () {
+        search.value.length != 0 ? input.classList.add('focus') : input.classList.remove('focus');
+      })
   </script>
 </body>
 </html>

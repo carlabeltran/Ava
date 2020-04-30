@@ -33,7 +33,6 @@ function populateTable() {
     let tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${transaction.date}</td>
-      <td>${transaction.category}</td>
       <td>${transaction.name}</td>
       <td>${transaction.value}</td>
     `;
@@ -67,21 +66,52 @@ function populateChart() {
   let ctx = document.getElementById("myChart").getContext("2d");
 
   myChart = new Chart(ctx, {
-    type: 'line',
-      data: {
-        labels,
-        datasets: [{
-            label: "Total Over Time",
-            fill: true,
-            backgroundColor: "#6666ff",
-            data
-        }]
-    }
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        {
+          label: "Total Over Time",
+          fill: true,
+          backgroundColor: "#33c7f7",
+          fontColor: `#fff`,
+          borderColor: "#33c7f7",
+          border: "2px",
+          data,
+        },
+        {
+          label: "Expenses",
+          fontColor: `#fff`,
+          fill: true,
+          backgroundColor: "rgb(254, 111, 117)",
+          border: "2px",
+          borderColor: "rgb(254, 111, 117)",
+          data,
+        },
+        {
+          label: "Income",
+          fill: true,
+          fontColor: `#fff`,
+          backgroundColor: "#38ef7d",
+          border: "2px",
+          borderColor: "#38ef7d",
+          data,
+        },
+        {
+          label: "Budget",
+          fill: true,
+          fontColor: `#fff`,
+          backgroundColor: "rgba(84, 58, 183, 1)",
+          border: "2px",
+          borderColor: "rgba(84, 58, 183, 1)",
+          data,
+        },
+      ],
+    },
   });
 }
 
 function sendTransaction(isAdding) {
-  let categoryEl = document.querySelector("#t-category");
   let nameEl = document.querySelector("#t-name");
   let amountEl = document.querySelector("#t-amount");
   let errorEl = document.querySelector(".form .error");
@@ -97,7 +127,6 @@ function sendTransaction(isAdding) {
 
   // create record
   let transaction = {
-    category: categoryEl.value,
     name: nameEl.value,
     value: amountEl.value,
     date: new Date().toISOString()
@@ -134,7 +163,6 @@ function sendTransaction(isAdding) {
     }
     else {
       // clear form
-      categoryEl.value = "";
       nameEl.value = "";
       amountEl.value = "";
     }
@@ -144,7 +172,6 @@ function sendTransaction(isAdding) {
     saveRecord(transaction);
 
     // clear form
-    categoryEl.value = "";
     nameEl.value = "";
     amountEl.value = "";
   });
