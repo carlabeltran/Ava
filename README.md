@@ -73,26 +73,17 @@ No installation required.
 ##### **Step 1**
 
 ```
-
+Add transaction description to the input field
 ```
 ##### **Step 2**
 
 ```
-
+Add amount of the transaction to the input field
 ```
 ##### **Step 3**
 
 ```
-
-```
-
-##### **Step 4**
-```
-
-```
-##### **Step 5**
-```
-
+Select on the add or subtract button 
 ```
 -----
 ## 🌈 Features
@@ -119,21 +110,21 @@ When brought back online:
 * Google Fonts
 * Node
 * Heroku
-* 
-* 
-* 
-* 
+* MongoDB
+* Mongoose
+* IndexDB
+* Morgan
+* Express
+* Mlab
+* ChartsJS
 
 ---
 
 ## 🔮 Future work
 
-- 
-- 
-- 
-- 
-- 
-- 
+- Improvements on visual apperance of charts
+- Completion of the footer
+- animations to page on load
 
 ---
 
@@ -163,8 +154,6 @@ ___
 **Carla Beltran**
 
 Full Stack Web Developer
-
-> One big challenge. 
 
 - Email: [@carlabeltran](https://github.com/carlabeltran14@icloud.com)
 - Linkdin: [@carlabeltran](https://github.com/carlabeltran)
