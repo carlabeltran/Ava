@@ -8,8 +8,8 @@
   <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
   <link rel="shortcut icon" href="https://github.com/carlabeltran/Ava/blob/master/Develop/public/assets/images/Ava-logo-blue/favicon.png?raw=true" alt="ava icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="manifest" href="/manifest.webmanifest">
   <title>Ava</title>
 </head>
 <body>
@@ -19,11 +19,23 @@
     </div>
 
     <div class="form">
+      
+      <label for="t-name"></label>
       <input type="text" id="t-name" placeholder="Name of transaction" />
+      
+      <label for="t-amount"></label>
       <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-      <p class="error"></p>
+      
+      <div class="transaction-buttons">
+      
+        <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
+      
+        <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+      
+        <p class="error"></p>
+      
+      </div>
+    
     </div>
 
     <div class="transactions">
@@ -37,12 +49,12 @@
         </tbody>
       </table>
     </div>
-    
+    <!-- <canvas id="my-chart"></canvas> -->
     <canvas id="myChart"></canvas>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="/assets/js/db.js"></script>
-  <script src="/assets/js/index.js"></script>
+  <script src="./assets/js/db.js"></script>
+  <script src="./assets/js/index.js"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {

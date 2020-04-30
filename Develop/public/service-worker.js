@@ -1,27 +1,27 @@
+console.log("Hello from your service worker!");
+
+//SET UP A REFERENCE FOR ALL FILES TO BE CACHED
 const FILES_TO_CACHE = [
-    "/",
-    "/index.html",
-    "/assets/js/index.js",
-    "/assets/js/db.js",
-    "/assets/css/styles.css",
-    "favicon.ico",
-    "service-worker.js",
-    "manifest.webmanifest",
-    "/assets/images/icons/icon-72x72.png",
-    "/assets/images/icons/icon-96x96.png",
-    "/assets/images/icons/icon-128x128.png",
-    "/assets/images/icons/icon-144x144.png",
-    "/assets/images/icons/icon-152x152.png",
-    "/assets/images/icons/icon-192x192.png",
-    "/assets/images/icons/icon-384x384.png",
-    "/assets/images/icons/icon-512x512.png",
+  "/",
+  "/index.html",
+  "/assets/js/index.js",
+  "/assets/js/db.js",
+  "/assets/css/styles.css",
+  "service-worker.js",
+  "manifest.webmanifest",
+  "/assets/images/Ava-logo-blue/favicon.png",
+  "/assets/images/Ava-logo-blue/logo.png",
+  "/assets/images/Ava-logo-blue/logo_transparent.png",
+  "/assets/images/icons/icon-192x192.png",
+  "/assets/images/icons/icon-512x512.png",
 ];
 
 const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 
-//INSTALL
+//EVENT LISTENER FOR WHEN SERVICE WORKER IS INSTALLED
 self.addEventListener("install", function(evt) {
+    //WAIT UNTIL CACHE IS OPENED
     evt.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
         console.log("Your files were pre-cached successfully!");
@@ -32,10 +32,11 @@ self.addEventListener("install", function(evt) {
     self.skipWaiting();
 });
 
-//ACTIVATE
+//EVENT LISTENER FOR WHEN SERVICE WORKER IS ACTIVATED
 self.addEventListener("activate", function(evt) {
+    //WAIT UNTIL CACHE IS OPENED
     evt.waitUntil(
-    caches.keys().then(keyList => {
+        caches.keys().then(keyList => {
         return Promise.all(
         keyList.map(key => {
             if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
@@ -74,8 +75,11 @@ self.addEventListener("fetch", function (evt) {
 
         return;
     }
+//FETCH DOESN'T CONTAIN '/API' RESPOND WITH
     evt.respondWith(caches.open(CACHE_NAME).then(cache => {
+        //
         return cache.match(evt.request).then(response => {
+            //IF RESPONSE EXISTS THEN RETURN IT OTHERWISE FETCH REQUEST
             return response || fetch(evt.request);
         });
     }));

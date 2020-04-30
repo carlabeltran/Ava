@@ -145,6 +145,7 @@ function sendTransaction(isAdding) {
 }
 
 document.querySelector("#add-btn").onclick = function() {
+  event.preventDefault();
   sendTransaction(true);
 };
 

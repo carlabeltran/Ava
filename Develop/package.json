@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Carla Beltran",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/coding-boot-camp/unit18hw/issues"
   },
@@ -26,5 +26,5 @@
   },
   "devDependencies": {},
   "keywords": [],
-  "description": ""
+  "description": "Budget Tracking Application"
 }
